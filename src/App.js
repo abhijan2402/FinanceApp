@@ -4,6 +4,8 @@ import FinancialSupport from './screens/FinancialSupport';
 import OurServices from './screens/OurServices';
 import Navbar from './screens/Navbar';
 import Landing from './screens/Landing';
+import Footer from './screens/Footer';
+import OurWork from './screens/OurWork';
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       <Navbar />
       <Landing />
       <Intro />
-      <FinancialSupport />
       <OurServices />
+      <FinancialSupport />
+      <OurWork />
+      <Footer />
     </div>
   );
 }
