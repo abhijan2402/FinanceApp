@@ -1,126 +1,67 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
+import React from "react";
 import Logo from "../assets/Images/Logo.png";
-const pages = ["Home", "About us"];
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
   return (
-    <AppBar position="static" style={{backgroundColor:"black"}}>
-      <Container maxWidth="xl" sx={{}}>
-        <Toolbar disableGutters>
-          <img
-            src={Logo}
-            alt="Home Page"
-            style={{ width: "45px", height: "45px" }}
-          />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-              mx: 2,
-            }}
-          >
-            FinXec
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <div style={navbar}>
+      <div style={logoContainer}>
+        <img src={Logo} alt="Home Page" style={logoStyle} />
+      </div>
+      <div style={navbarItems}>
+        <ul style={navbarList}>
+          <li style={navbarItem}>Home</li>
+          <li style={navbarItem}>About</li>
+          <li style={navbarItem}>Blogs</li>
+        </ul>
+      </div>
+    </div>
   );
 }
+
 export default Navbar;
+
+const navbar = {
+  position: "sticky",
+  top: 0,
+  width: "100%",
+  backgroundColor: "none", // Transparent background
+  display: "flex",
+  alignItems: "center",
+  padding: "10px 20px",
+  zIndex: 1000, // Ensure it stays on top
+};
+
+const logoContainer = {
+  flexGrow: 1,
+};
+
+const logoStyle = {
+  width: "45px",
+  height: "45px",
+};
+
+const navbarItems = {
+  display: "flex",
+  justifyContent: "flex-end",
+  flexGrow: 2,
+};
+
+const navbarList = {
+  display: "flex",
+  listStyle: "none",
+  margin: 0,
+  padding: 0,
+};
+
+const navbarItem = {
+  margin: "0 15px",
+  color: "white", // White text to stand out on transparent background
+  cursor: "pointer",
+  fontSize: "18px",
+  fontFamily: "Arial, sans-serif",
+  transition: "color 0.3s ease",
+};
+
+navbarItem["&:hover"] = {
+  color: "#ccc", // Lighter color on hover
+};
