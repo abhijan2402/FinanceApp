@@ -1,0 +1,58 @@
+.service_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+.card_Service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service-card {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.8; /* Fade effect */
+    cursor: pointer;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    opacity: 1; /* Remove fade on hover */
+  }
+  
+  .service-card .card-body {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service-card .card-title,
+  .service-card .card-text {
+    color: white;
+  }
+  .card-title{
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .service-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-body i {
+    font-size: 40px;
+  }

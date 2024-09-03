@@ -1,0 +1,76 @@
+.financial-overview-container {
+  background-image: url("../../assets/Images/Img1.jpeg"); /* Use the appropriate path for your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.financial-overview-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Add a black overlay with opacity for faded look */
+  z-index: 1;
+}
+
+.financial-overview-content {
+  position: relative;
+  z-index: 2; /* Ensure the content appears above the overlay */
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+
+.financial-overview-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.financial-overview-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.financial-services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 2rem 2rem;
+    /* background-color: rgba(0, 0, 0, 0.559) ; */
+    border-radius: 8px;
+    color: #000;
+    background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);}
+
+.service-item h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .financial-services {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

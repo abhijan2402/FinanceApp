@@ -1,0 +1,35 @@
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  position: absolute;
+  z-index:1;
+  width: 100%;
+  color: #fff;
+  height: 100px;
+}
+
+.nav_items_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_items_list ul {
+  display: flex;
+  gap: 70px;
+}
+
+.nav_items_list ul li {
+  list-style: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s all ease-in-out;
+  letter-spacing: 2px;
+}
+
+.nav_items_list ul li.active {
+  color: red;
+  font-weight: bold;
+}
