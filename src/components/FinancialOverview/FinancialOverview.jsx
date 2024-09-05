@@ -34,19 +34,15 @@ const FinancialOverview = () => {
             data-aos-delay="300"
           >
             <h2>Diverse Investment Options</h2>
-            <p>
+            <p style={{ color: "black" }}>
               Explore a diverse range of investment options to craft a portfolio
               that aligns with your personal and financial objectives.
             </p>
           </div>
 
-          <div
-            className="service-item"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
+          <div className="service-item" data-aos="fade-up" data-aos-delay="400">
             <h2>Risk Management Strategies</h2>
-            <p>
+            <p style={{ color: "black" }}>
               Implement robust risk management strategies to protect your wealth
               and safeguard your investments.
             </p>
@@ -62,7 +58,7 @@ const FinancialOverview = () => {
             data-aos-delay="500"
           >
             <h2>Retirement Planning</h2>
-            <p>
+            <p style={{ color: "black" }}>
               Plan for your retirement with confidence and secure great returns
               aligned with your life goals.
             </p>

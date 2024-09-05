@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import logo from "../../assets/Images/logo.png";
+import logo from "../../assets/Images/Logo.png";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -13,7 +13,9 @@ const Navbar = () => {
     <>
       <div className="navigation">
         <div className="logo">
-          <img src={logo} alt="LOGO" />
+          <h1>
+            Fin<span style={{ color: "red" }}>X</span>ec
+          </h1>
         </div>
         <div className="nav_items_list">
           <ul>
