@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./WhoWeAre.css";
 
 const WhoWeAre = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS
+  }, []);
+
   return (
     <div className="container-fluid who_container">
-      <h2 className="text-center who_heading mb-4">Who We Are ?</h2>
-      <p className="lead text-center mb-5">
+      <h2 className="text-center who_heading mb-4" data-aos="fade-up">
+        Who We Are?
+      </h2>
+      <p className="lead text-center mb-5" data-aos="fade-up" data-aos-delay="200">
         At FinXec, we are dedicated to helping you achieve your financial dreams
         by providing expert wealth management services both online and offline.
         Utilizing cutting-edge AI and machine learning technologies, we offer
@@ -15,7 +23,7 @@ const WhoWeAre = () => {
       </p>
 
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-4" data-aos="zoom-in" data-aos-delay="300">
           <div className="card text-center h-100">
             <div className="card-body">
               <i className="bi bi-bar-chart-fill fs-1 text-primary mb-3"></i>
@@ -28,7 +36,7 @@ const WhoWeAre = () => {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4" data-aos="zoom-in" data-aos-delay="400">
           <div className="card text-center h-100">
             <div className="card-body">
               <i className="bi bi-person-check-fill fs-1 text-primary mb-3"></i>
@@ -41,7 +49,7 @@ const WhoWeAre = () => {
           </div>
         </div>
 
-        <div className="col-md-4">
+        <div className="col-md-4" data-aos="zoom-in" data-aos-delay="500">
           <div className="card text-center h-100">
             <div className="card-body">
               <i className="bi bi-gear-fill fs-1 text-primary mb-3"></i>

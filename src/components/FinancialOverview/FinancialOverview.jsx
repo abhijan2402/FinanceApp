@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./FinancialOverview.css"; // Import the CSS file for styling
 import BackgroundImage from "../../assets/Images/Img1.jpeg"; // Import your image
 
 const FinancialOverview = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS
+  }, []);
+
   return (
     <div className="financial-overview-container">
       <div className="financial-overview-content">
-        <h1>
+        <h1 data-aos="fade-up" data-aos-delay="100">
           Master Your <span style={{ color: "red" }}>Finances</span> - Unmatched
           Guidance & Support
         </h1>
-        <p>
+        <p data-aos="fade-up" data-aos-delay="200">
           Experience unparalleled financial support with access to a
           comprehensive array of investment products designed to meet your
           unique goals and aspirations. Take charge of your financial future
@@ -24,6 +30,8 @@ const FinancialOverview = () => {
               backgroundImage:
                 "linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)",
             }}
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             <h2>Diverse Investment Options</h2>
             <p>
@@ -32,7 +40,11 @@ const FinancialOverview = () => {
             </p>
           </div>
 
-          <div className="service-item">
+          <div
+            className="service-item"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <h2>Risk Management Strategies</h2>
             <p>
               Implement robust risk management strategies to protect your wealth
@@ -46,6 +58,8 @@ const FinancialOverview = () => {
               backgroundImage:
                 "linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)",
             }}
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             <h2>Retirement Planning</h2>
             <p>

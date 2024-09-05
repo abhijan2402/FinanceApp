@@ -36,12 +36,14 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 700;
+
 }
 
 .financial-overview-content p {
   font-size: 1.2rem;
   margin-bottom: 40px;
   line-height: 1.6;
+  color: #f3e7e9;
 }
 
 .financial-services {
