@@ -6,11 +6,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+  background-color: rgba(0, 0, 0, 0.7); 
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 10px;
 }
 
 .modal-container {
@@ -20,6 +21,7 @@
   max-width: 500px;
   width: 100%;
   position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .close-button {
@@ -32,6 +34,7 @@
 
 .modal-container h1 {
   margin-bottom: 15px;
+  font-size: 1.5rem; 
 }
 
 .modal-container .btn {
@@ -42,6 +45,7 @@
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  font-size: 1rem;
 }
 
 .modal-container .btn:hover {
@@ -61,15 +65,64 @@
 }
 
 .modal-container textarea {
-  resize: vertical; /* Allows vertical resizing of the textarea */
-  min-height: 100px; /* Minimum height for the textarea */
+  resize: vertical; 
+  min-height: 100px; 
 }
 
 .modal-container label {
   display: block;
   margin-top: 10px;
+  font-size: 1rem;
 }
 
 p {
   color: #666;
+  font-size: 0.9rem; 
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .modal-container {
+    max-width: 90%; 
+    padding: 15px;
+  }
+
+  .modal-container h1 {
+    font-size: 1.3rem; 
+  }
+
+  .modal-container .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .modal-container input[type="text"],
+  .modal-container input[type="tel"],
+  .modal-container textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-container {
+    max-width: 100%; 
+    padding: 10px;
+  }
+
+  .modal-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .modal-container .btn {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .modal-container input[type="text"],
+  .modal-container input[type="tel"],
+  .modal-container textarea {
+    font-size: 12px;
+    padding: 6px;
+  }
 }

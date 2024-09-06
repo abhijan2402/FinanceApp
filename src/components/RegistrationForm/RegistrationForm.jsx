@@ -41,12 +41,12 @@ const RegistrationForm = ({ closeModal }) => {
 
         <form action="https://formspree.io/f/mblrbpyb" method="POST">
           <label>
-            <b>Username</b>
+            <b>Name</b>
           </label>
           <input
             type="text"
             name="username"
-            placeholder="Enter Username"
+            placeholder="Enter name"
             value={formData.username}
             onChange={handleChange}
             required
