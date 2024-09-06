@@ -19,3 +19,17 @@
     color: #007bff; /* Primary color for Bootstrap */
   }
   
+
+
+  @media (max-width: 576px) {
+    .who_container p{
+      font-size: 18px;
+    }
+    .who_we_are_Card{
+      margin-bottom: 20px;
+    }
+    .who_container{
+      background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+      padding: 2rem 1rem;
+  }
+}

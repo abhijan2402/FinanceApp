@@ -1,3 +1,4 @@
+/* Landing Container */
 .landing-container {
   height: 100vh;
   width: 100%;
@@ -11,13 +12,14 @@
   transition: background-image 1.5s ease-in-out;
 }
 
+/* Content Styling */
 .content {
   text-align: center;
   color: white;
-  background-color: rgba(0, 0, 0, 0.632);
-  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
   border-radius: 10px;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -25,6 +27,7 @@
   justify-content: center;
 }
 
+/* Header Styling */
 .content h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -32,8 +35,64 @@
   margin-bottom: 20px;
 }
 
+/* Paragraph Styling */
 .content p {
   font-size: 1.7rem;
   letter-spacing: 1px;
   color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+  .content {
+    width: 100%;
+  }
+  .content h1 {
+    font-size: 4rem;
+  }
+  .content p {
+    font-size: 1.8rem;
+  }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 991px) {
+  .content {
+    width: 100%;
+  }
+  .content h1 {
+    font-size: 3rem;
+  }
+  .content p {
+    font-size: 1.5rem;
+  }
+}
+
+/* For small screens (phones) */
+@media (max-width: 767px) {
+  .content {
+    width: 100%;
+    padding: 15px;
+  }
+  .content h1 {
+    font-size: 2.5rem;
+  }
+  .content p {
+    font-size: 1.3rem;
+  }
+}
+
+/* For extra small screens (phones in portrait mode) */
+@media (max-width: 576px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1.2rem;
+  }
+  .landing-container {
+    height: 90vh;
+  }
 }

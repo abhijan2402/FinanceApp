@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Img1 from "../../assets/Images/Img1.jpeg";
 import Img2 from "../../assets/Images/Img2.webp";
 import Img3 from "../../assets/Images/Img4.webp";
-import "./MainScreen.css"; // Import the CSS file for styling
+import "./MainScreen.css";
 
-const images = [Img1, Img2, Img3];
+const images = [Img2, Img1, Img3];
 
 const MainScreen = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -12,7 +12,7 @@ const MainScreen = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 

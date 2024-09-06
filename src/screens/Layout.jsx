@@ -20,7 +20,7 @@ const Layout = () => {
   };
 
   return (
-    <div>
+    <div className="container-fluid">
       <MainScreen />
       <WhoWeAre />
       <Services openModal={openModal} />

@@ -23,9 +23,9 @@ const FinancialOverview = () => {
           today and navigate the path to success with FinXec.
         </p>
 
-        <div className="financial-services">
+        <div className="financial-services row">
           <div
-            className="service-item"
+            className="service-item "
             style={{
               backgroundImage:
                 "linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)",
@@ -40,7 +40,7 @@ const FinancialOverview = () => {
             </p>
           </div>
 
-          <div className="service-item" data-aos="fade-up" data-aos-delay="400">
+          <div className="service-item " data-aos="fade-up" data-aos-delay="400">
             <h2>Risk Management Strategies</h2>
             <p style={{ color: "black" }}>
               Implement robust risk management strategies to protect your wealth
@@ -49,7 +49,7 @@ const FinancialOverview = () => {
           </div>
 
           <div
-            className="service-item"
+            className="service-item "
             style={{
               backgroundImage:
                 "linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)",

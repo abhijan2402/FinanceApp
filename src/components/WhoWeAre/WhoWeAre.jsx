@@ -23,12 +23,12 @@ const WhoWeAre = () => {
       </p>
 
       <div className="row">
-        <div className="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div className="col-md-4 who_we_are_Card" data-aos="zoom-in" data-aos-delay="300">
           <div className="card text-center h-100">
             <div className="card-body">
               <i className="bi bi-bar-chart-fill fs-1 text-primary mb-3"></i>
               <h5 className="card-title">Comprehensive Planning</h5>
-              <p className="card-text">
+              <p className="card-text who_we_are_Cardtext">
                 Gain access to a wide range of financial planning support and
                 products aligned with your unique vision and goals.
               </p>
@@ -36,12 +36,12 @@ const WhoWeAre = () => {
           </div>
         </div>
 
-        <div className="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+        <div className="col-md-4  who_we_are_Card" data-aos="zoom-in" data-aos-delay="400">
           <div className="card text-center h-100">
             <div className="card-body">
               <i className="bi bi-person-check-fill fs-1 text-primary mb-3"></i>
               <h5 className="card-title">Expert Guidance</h5>
-              <p className="card-text">
+              <p className="card-text who_we_are_Cardtext">
                 Receive expert guidance from our team of experienced
                 professionals who are committed to your financial success.
               </p>
@@ -49,12 +49,12 @@ const WhoWeAre = () => {
           </div>
         </div>
 
-        <div className="col-md-4" data-aos="zoom-in" data-aos-delay="500">
+        <div className="col-md-4  who_we_are_Card" data-aos="zoom-in" data-aos-delay="500">
           <div className="card text-center h-100">
             <div className="card-body">
               <i className="bi bi-gear-fill fs-1 text-primary mb-3"></i>
               <h5 className="card-title">Customized Solutions</h5>
-              <p className="card-text">
+              <p className="card-text who_we_are_Cardtext">
                 Get personalized financial solutions tailored to your individual
                 needs and aspirations.
               </p>

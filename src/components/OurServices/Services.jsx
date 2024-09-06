@@ -23,13 +23,8 @@ const Services = ({ openModal }) => {
         <hr className="mx-auto" />
       </div>
 
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div data-aos="fade-up " className="our-heading_text" data-aos-delay="200">
         <p
-          style={{
-            textAlign: "center",
-            fontSize: "1.8rem",
-            marginBottom: "30px",
-          }}
         >
           At FinXec, we offer a wide range of wealth management and financial
           planning services to help you achieve your financial goals and secure
@@ -38,7 +33,7 @@ const Services = ({ openModal }) => {
       </div>
 
       <div className="row">
-        <div className="col-md-4" data-aos="fade-up" data-aos-delay="400">
+        <div className="col-lg-4" data-aos="fade-up" data-aos-delay="400">
           <div
             className="card text-center service-card"
             style={{ backgroundImage: `url(${Img1})` }}
@@ -56,7 +51,7 @@ const Services = ({ openModal }) => {
             </div>
           </div>
         </div>
-        <div className="col-md-4" data-aos="fade-up" data-aos-delay="600">
+        <div className="col-lg-4" data-aos="fade-up" data-aos-delay="600">
           <div
             className="card text-center service-card"
             style={{ backgroundImage: `url(${Img2})` }}
@@ -75,7 +70,7 @@ const Services = ({ openModal }) => {
             </div>
           </div>
         </div>
-        <div className="col-md-4" data-aos="fade-up" data-aos-delay="800">
+        <div className="col-lg-4" data-aos="fade-up" data-aos-delay="800">
           <div
             className="card text-center service-card"
             style={{ backgroundImage: `url(${Img3})` }}

@@ -17,7 +17,7 @@ function OurWork() {
         <hr className="mx-auto" />
       </div>
       <div className="row work-content">
-        <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div className="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
           <div
             className="card p-4 content-box text-center"
             style={{ backgroundImage: "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)" }}
@@ -30,7 +30,7 @@ function OurWork() {
             </p>
           </div>
         </div>
-        <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div className="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
           <div
             className="card p-4 content-box text-center"
             style={{ backgroundImage: "linear-gradient(to top, #feada6 0%, #f5efef 100%)" }}
@@ -43,7 +43,7 @@ function OurWork() {
             </p>
           </div>
         </div>
-        <div className="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+        <div className="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600">
           <div
             className="card p-4 content-box text-center"
             style={{ backgroundImage: "linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%)" }}

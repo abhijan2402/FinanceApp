@@ -33,3 +33,14 @@
   color: red;
   font-weight: bold;
 }
+
+
+@media (max-width: 576px) {
+  .nav_items_list ul {
+    gap: 30px;
+    font-size: 12px;
+  }
+  .logo h1{
+    font-size: 25px;
+  }
+}
