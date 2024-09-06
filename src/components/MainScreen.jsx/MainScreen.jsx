@@ -6,7 +6,7 @@ import "./MainScreen.css";
 
 const images = [Img2, Img1, Img3];
 
-const MainScreen = () => {
+const MainScreen = ({openModal }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const MainScreen = () => {
           of investment products tailored to your <span style={{color:"red"}}>goals</span> and <span style={{color:"red"}}>aspirations</span>. It’s
           time to take control of your financial future!
         </p>
+        <button className="landing_btn" onClick={openModal}>Let's Connect</button>
       </div>
     </div>
   );

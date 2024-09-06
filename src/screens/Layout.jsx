@@ -21,7 +21,7 @@ const Layout = () => {
 
   return (
     <div className="container-fluid">
-      <MainScreen />
+      <MainScreen openModal={openModal} />
       <WhoWeAre />
       <Services openModal={openModal} />
       <FinancialOverview />

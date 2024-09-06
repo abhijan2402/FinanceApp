@@ -42,6 +42,25 @@
   color: #fff;
 }
 
+.landing_btn {
+  padding: 15px 20px;
+  width: 30%;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  transition: 0.8s all ease-in-out;
+}
+
+.landing_btn:hover {
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
 /* Media Queries for Responsiveness */
 
 /* For large screens (desktops) */
@@ -68,6 +87,9 @@
   .content p {
     font-size: 1.5rem;
   }
+  .landing_btn {
+    width: 60%;
+  }
 }
 
 /* For small screens (phones) */
@@ -82,6 +104,9 @@
   .content p {
     font-size: 1.3rem;
   }
+  .landing_btn {
+    width: 80%;
+  }
 }
 
 /* For extra small screens (phones in portrait mode) */
@@ -94,5 +119,8 @@
   }
   .landing-container {
     height: 90vh;
+  }
+  .landing_btn {
+    width: 100%;
   }
 }

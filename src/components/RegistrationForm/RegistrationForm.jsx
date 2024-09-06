@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import "./RegistrationForm.css";
 
 const RegistrationForm = ({ closeModal }) => {
@@ -28,34 +27,6 @@ const RegistrationForm = ({ closeModal }) => {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      sendEmail();
-    }
-  };
-
-  const sendEmail = () => {
-    emailjs
-      .send(
-        "service_pausitr",
-        "template_umffnti",
-        formData,
-        "brxHPaEGgAk3WeFcT"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSubmitted(true);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send the message.");
-        }
-      );
-  };
-
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
@@ -68,7 +39,7 @@ const RegistrationForm = ({ closeModal }) => {
           <p style={{ color: "green" }}>Query sent successfully!</p>
         )}
 
-        <form onSubmit={handleSubmit}>
+        <form action="https://formspree.io/f/mblrbpyb" method="POST">
           <label>
             <b>Username</b>
           </label>
@@ -80,7 +51,9 @@ const RegistrationForm = ({ closeModal }) => {
             onChange={handleChange}
             required
           />
-          {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
+          {errors.username && (
+            <p style={{ color: "red" }}>{errors.username}</p>
+          )}
 
           <label>
             <b>Email</b>
@@ -111,12 +84,12 @@ const RegistrationForm = ({ closeModal }) => {
           <label>
             <b>Query</b>
           </label>
-          <input
-            type="text"
+          <textarea
             name="query"
             placeholder="Enter your query"
             value={formData.query}
             onChange={handleChange}
+            rows="4"
             required
           />
           {errors.query && <p style={{ color: "red" }}>{errors.query}</p>}
