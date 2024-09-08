@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./RegistrationForm.css";
+import axios from "axios";
 
 const RegistrationForm = ({ closeModal }) => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,38 @@ const RegistrationForm = ({ closeModal }) => {
     return Object.keys(errors).length === 0;
   };
 
+
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    const ServiceId = "service_6z8lubi";
+    const templateId = "template_zbvt2xe";
+    const publicId = "lTNHBa_UhwuPFLUvQ";
+  
+    const data = {
+      service_id: ServiceId,
+      template_id: templateId,
+      user_id: publicId,
+      template_params: {
+        username: formData.username,
+        email: formData.email,
+        phone: formData.phone,
+        query: formData.query,
+      },
+    };
+
+    try {
+      const res = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data,
+      );
+      console.log(res);
+      setFormData("");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="modal-overlay" onClick={closeModal}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
@@ -39,7 +72,7 @@ const RegistrationForm = ({ closeModal }) => {
           <p style={{ color: "green" }}>Query sent successfully!</p>
         )}
 
-        <form action="https://formspree.io/f/mblrbpyb" method="POST">
+        <form onSubmit={sendEmail}>
           <label>
             <b>Name</b>
           </label>
@@ -51,9 +84,7 @@ const RegistrationForm = ({ closeModal }) => {
             onChange={handleChange}
             required
           />
-          {errors.username && (
-            <p style={{ color: "red" }}>{errors.username}</p>
-          )}
+          {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
 
           <label>
             <b>Email</b>
@@ -104,3 +135,5 @@ const RegistrationForm = ({ closeModal }) => {
 };
 
 export default RegistrationForm;
+
+// action="https://formspree.io/f/mblrbpyb" method="POST"
