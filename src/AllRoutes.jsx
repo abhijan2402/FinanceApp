@@ -7,8 +7,8 @@ const AllRoutes = () => {
   return (
     <div>
       <Routes>
-        <Route path="/FinanceApp/" element={<Layout />} />
-        <Route path="/FinanceApp/regestration" element={<RegistrationForm />} />
+        <Route path="/" element={<Layout />} />
+        <Route path="/regestration" element={<RegistrationForm />} />
       </Routes>
     </div>
   );
