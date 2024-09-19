@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({navcolor}) => {
   const [activeItem, setActiveItem] = useState("Home");
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navigation">
+      <div className="navigation" style={{color:navcolor}}>
         <div className="logo">
           <h1>
             Fin<span style={{ color: "red" }}>X</span>ec

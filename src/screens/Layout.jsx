@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials/Testimonials";
 import OurWork from "../components/OurWork/OurWork";
 import Footer from "../components/Footer/Footer";
 import RegistrationForm from "../components/RegistrationForm/RegistrationForm";
+import Navbar from "../components/Navbar/Navbar";
 
 const Layout = () => {
   const [showModal, setShowModal] = useState(false);
@@ -20,6 +21,8 @@ const Layout = () => {
   };
 
   return (
+    <>
+      <Navbar/>
     <div className="container-fluid">
       <MainScreen openModal={openModal} />
       <WhoWeAre />
@@ -27,10 +30,10 @@ const Layout = () => {
       <FinancialOverview />
       <OurWork />
       <Testimonials />
-      <Footer />
 
       {showModal && <RegistrationForm closeModal={closeModal} />}
     </div>
+    </>
   );
 };
 

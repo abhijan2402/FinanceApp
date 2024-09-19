@@ -3,15 +3,21 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../Style/Blog.css";
 import SliderScreen from "../components/SilderScreen/SliderScreen";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar/Navbar";
 
 const Blog = () => {
+  const navigate = useNavigate()
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const navcolor = "#000";
+
   return (
     <>
-      <SliderScreen />
+      {/* <SliderScreen /> */}
+      <Navbar navcolor={navcolor}/>
       <div className="blog-page">
         <h5 className="blog-heading"></h5>
 
@@ -29,7 +35,7 @@ const Blog = () => {
                 <p>
                   Discover the best ways to grow your portfolio this year with these top investment strategies.
                 </p>
-                <button className="read-more-btn">Read More</button>
+                <button className="read-more-btn" onClick={() => navigate("/blog_details")}>Read More</button>
               </div>
             ))}
           </div>
