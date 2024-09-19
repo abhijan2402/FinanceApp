@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Img1 from "../../assets/Images/Img1.jpeg";
 import Img2 from "../../assets/Images/Img2.webp";
 import Img3 from "../../assets/Images/Img4.webp";
-import "./MainScreen.css";
+import "../MainScreen.jsx/MainScreen.css";
 
 const images = [Img2, Img1, Img3];
 
-const MainScreen = ({openModal, blogdesc }) => {
+const MainScreen = ({ openModal, blogdesc }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -22,13 +22,17 @@ const MainScreen = ({openModal, blogdesc }) => {
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       <div className="content">
-        <h1>Empower Your Wealth with Fin<span style={{color:"red"}}>X</span>ec</h1>
+        <h1>
+          Empowering Your Financial Journey with Fin
+          <span style={{ color: "red" }}>X</span>ec
+        </h1>
         <p>
-          Experience the future of financial planning with access to a wide range
-          of investment products tailored to your <span style={{color:"red"}}>goals</span> and <span style={{color:"red"}}>aspirations</span>. It’s
-          time to take control of your financial future!
+          Where the latest trends meet timeless wisdom—explore our blogs to gain
+          insights, expand your horizons, and fuel your passion.
         </p>
-        <button className="landing_btn" onClick={openModal}>Contact Us</button>
+        <button className="landing_btn" onClick={openModal}>
+          Explor More
+        </button>
       </div>
     </div>
   );

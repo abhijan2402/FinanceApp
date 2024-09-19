@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
+  const navigate = useNavigate();
 
   const handleItemClick = (item) => {
     setActiveItem(item);
+    if (item === "Home") {
+      navigate("/");
+    } else {
+      navigate(`/${item}`);
+    }
   };
 
   return (
@@ -24,17 +31,18 @@ const Navbar = () => {
             >
               Home
             </li>
-            <li
-              className={activeItem === "About" ? "active" : ""}
-              onClick={() => handleItemClick("About")}
-            >
-              About
-            </li>
+
             <li
               className={activeItem === "Blog" ? "active" : ""}
               onClick={() => handleItemClick("Blog")}
             >
               Blog
+            </li>
+            <li
+              className={activeItem === "About" ? "active" : ""}
+              onClick={() => handleItemClick("About")}
+            >
+              About
             </li>
           </ul>
         </div>
