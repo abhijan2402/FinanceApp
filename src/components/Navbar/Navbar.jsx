@@ -38,12 +38,12 @@ const Navbar = ({navcolor}) => {
             >
               Blog
             </li>
-            <li
+            {/* <li
               className={activeItem === "About" ? "active" : ""}
               onClick={() => handleItemClick("About")}
             >
               About
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

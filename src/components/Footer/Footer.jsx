@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-white pt-4">
       <div className="container footer_container">
-        <div className="row text-center text-md-start">
+        <div className=" footer_content text-md-start">
           <div className="col-md-4 mb-3">
             <h5>Contact Us</h5>
             <p>
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-4 mb-3">
-            <h5>Addresses</h5>
+            <h5 className="address">Addresses</h5>
             <p>
               <i className="bi bi-geo-alt-fill me-2"></i>Registered: 3013, C
               Block, Greenfield Colony, Faridabad.

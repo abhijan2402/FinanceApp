@@ -18,3 +18,24 @@ footer p {
 footer .bi {
   color: #f8f9fa;
 }
+
+.footer_content {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 791px) {
+  .footer_content {
+    align-items: center;
+    flex-direction: column;
+  }
+  .address {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer_content {
+    align-items: center;
+  }
+}
