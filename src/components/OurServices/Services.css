@@ -96,6 +96,9 @@
   .service-card{
     margin-bottom: 20px;
   }
+  .query_btn{
+    width: 40%;
+  }
 }
 @media (max-width: 576px) {
   .our-heading_text p {
